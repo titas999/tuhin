@@ -223,7 +223,7 @@ if ( defined( 'JETPACK__VERSION' ) ) {
 /**
  * Plugin Activation
  */
-//require_once get_template_directory() . '/inc/plugin-activation.php';
+require_once get_template_directory() . '/inc/plugin-activation.php';
 require_once get_template_directory() . '/inc/tuhin-helper.php';
 
 /**

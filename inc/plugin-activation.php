@@ -33,7 +33,7 @@
  */
 require_once get_template_directory() . '/lib/class-tgm-plugin-activation.php';
 
-add_action( 'tgmpa_register', 'topnotch_register_required_plugins' );
+add_action( 'tgmpa_register', 'tuhin_register_required_plugins' );
 
 /**
  * Register the required plugins for this theme.
@@ -52,41 +52,36 @@ add_action( 'tgmpa_register', 'topnotch_register_required_plugins' );
  *
  * This function is hooked into `tgmpa_register`, which is fired on the WP `init` action on priority 10.
  */
-function topnotch_register_required_plugins() {
+function tuhin_register_required_plugins() {
 	/*
 	 * Array of plugin arrays. Required keys are name and slug.
 	 * If the source is NOT from the .org repo, then source is also required.
 	 */
 	$plugins = array(
-		array(
-            'name'      => 'Codestar Framework',
-            'slug'      => 'codestar-framework',
-            'source'    =>  get_theme_file_path("/plugins/codestar-framework.zip"),
-            'required'  => true,
-        ),
-        array(
-            'name'      => 'Elementor Pro',
-            'slug'      => 'elementor-pro',
-            'source'    =>  get_theme_file_path("/plugins/elementor-pro.zip"),
-            'required'  => false,
-        ),
-        array(
-            'name'      => 'Topnotch Element',
-            'slug'      => 'topnotch-element',
-            'source'    =>  get_theme_file_path("/plugins/topnotch-element.zip"),
-            'required'  => false,
-        ),
+//		array(
+//            'name'      => 'Codestar Framework',
+//            'slug'      => 'codestar-framework',
+//            'source'    =>  get_theme_file_path("/plugins/codestar-framework.zip"),
+//            'required'  => true,
+//        ),
+//        array(
+//            'name'      => 'Elementor Pro',
+//            'slug'      => 'elementor-pro',
+//            'source'    =>  get_theme_file_path("/plugins/elementor-pro.zip"),
+//            'required'  => false,
+//        ),
+//        array(
+//            'name'      => 'tuhin Element',
+//            'slug'      => 'tuhin-element',
+//            'source'    =>  get_theme_file_path("/plugins/tuhin-element.zip"),
+//            'required'  => false,
+//        ),
 
 		 array(
-		 	'name'        => 'Elementor',
-		 	'slug'        => 'elementor',
+		 	'name'        => 'ACF',
+		 	'slug'        => 'advanced-custom-fields',
              'required'   => false,
 		 ),
-        array(
-            'name'        => 'Max Mega Menu',
-            'slug'        => 'megamenu',
-            'required'   => false,
-        ),
 
 	);
 
@@ -100,7 +95,7 @@ function topnotch_register_required_plugins() {
 	 * Only uncomment the strings in the config array if you want to customize the strings.
 	 */
 	$config = array(
-		'id'           => 'topnotch',                 // Unique ID for hashing notices for multiple instances of TGMPA.
+		'id'           => 'tuhin',                 // Unique ID for hashing notices for multiple instances of TGMPA.
 		'default_path' => '',                      // Default absolute path to bundled plugins.
 		'menu'         => 'tgmpa-install-plugins', // Menu slug.
 		'has_notices'  => true,                    // Show admin notices or not.
