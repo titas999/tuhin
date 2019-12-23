@@ -226,36 +226,13 @@ if ( defined( 'JETPACK__VERSION' ) ) {
 require_once get_template_directory() . '/inc/plugin-activation.php';
 require_once get_template_directory() . '/inc/tuhin-helper.php';
 
-/**
- * Metaboxes additions
- */
-//require_once(get_theme_file_path('/inc/metaboxes/section.php'));
-//require_once(get_theme_file_path('/inc/metaboxes/page.php'));
-//require_once(get_theme_file_path('/inc/metaboxes/section-banner.php'));
-//require_once(get_theme_file_path('/inc/metaboxes/section-services.php'));
-//require_once(get_theme_file_path('/inc/metaboxes/section-blog.php'));
-//require_once(get_theme_file_path('/inc/metaboxes/section-newsletter.php'));
-//require_once(get_theme_file_path('/inc/metaboxes/section-blog.php'));
-//require_once(get_theme_file_path('/inc/metaboxes/section-testimonial.php'));
-//require_once(get_theme_file_path('/inc/metaboxes/section-about.php'));
-//require_once(get_theme_file_path('/inc/metaboxes/section-call2action.php'));
-//require_once(get_theme_file_path('/inc/metaboxes/section-reports.php'));
-//
-//require_once(get_theme_file_path('/inc/options/tuhin-options.php'));
-//require_once(get_theme_file_path('/inc/metaboxes/tuhin-services.php'));
-//require_once(get_theme_file_path('/inc/metaboxes/web-apps-details.php'));
-//require_once(get_theme_file_path('/inc/metaboxes/services.php'));
-//require_once(get_theme_file_path('/inc/metaboxes/tuhin-app-services.php'));
-//require_once(get_theme_file_path('/inc/metaboxes/portfolios.php'));
-//require_once(get_theme_file_path('/inc/metaboxes/ppc-services.php'));
-//require_once(get_theme_file_path('/inc/metaboxes/seo-services.php'));
-//require_once(get_theme_file_path('/inc/metaboxes/smm-services.php'));
 function add_class_to_category( $thelist, $separator, $parents){
     $class_to_add = 'tag-link';
     return str_replace('<a href="',  '<a class="'. $class_to_add. '" href="', $thelist);
 }
 
 add_filter('the_category', __NAMESPACE__ . '\\add_class_to_category',10,3);
+
 function tuhin_pagination()
 {
     global $wp_query;
