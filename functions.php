@@ -234,8 +234,8 @@ require_once get_template_directory() . '/inc/tuhin-helper.php';
 //require_once(get_theme_file_path('/inc/metaboxes/section-banner.php'));
 //require_once(get_theme_file_path('/inc/metaboxes/section-services.php'));
 //require_once(get_theme_file_path('/inc/metaboxes/section-blog.php'));
-//require_once(get_theme_file_path('/inc/metaboxes/section-counter.php'));
-//require_once(get_theme_file_path('/inc/metaboxes/section-features.php'));
+//require_once(get_theme_file_path('/inc/metaboxes/section-newsletter.php'));
+//require_once(get_theme_file_path('/inc/metaboxes/section-blog.php'));
 //require_once(get_theme_file_path('/inc/metaboxes/section-testimonial.php'));
 //require_once(get_theme_file_path('/inc/metaboxes/section-about.php'));
 //require_once(get_theme_file_path('/inc/metaboxes/section-call2action.php'));
@@ -285,3 +285,20 @@ function tuhin_comment_fields($fields){
 }
 
 add_filter('comment_form_fields', 'tuhin_comment_fields');
+
+function tuhin_process_section_type($part){
+    global $post;
+    if ($post && 'section'== $post->post_type){
+        $section_type = get_post_meta($post->ID,'tuhin_section_type',true);
+        $sections = array('banner','about','services','skills','blog','newsletter','testimonial','contact');
+        foreach ($sections as $section){
+            if ("section-{$section}.php"==$part['part'] && $section!=$section_type){
+                return false;
+            }
+        }
+
+    }
+    return $part;
+}
+
+add_filter('piklist_part_process','tuhin_process_section_type');

@@ -70,16 +70,15 @@ function tuhin_register_required_plugins() {
 //            'source'    =>  get_theme_file_path("/plugins/elementor-pro.zip"),
 //            'required'  => false,
 //        ),
-//        array(
-//            'name'      => 'tuhin Element',
-//            'slug'      => 'tuhin-element',
-//            'source'    =>  get_theme_file_path("/plugins/tuhin-element.zip"),
-//            'required'  => false,
-//        ),
+        array(
+            'name'      => 'Piklist',
+            'slug'      => 'piklist',
+            'required'  => false,
+        ),
 
 		 array(
-		 	'name'        => 'ACF',
-		 	'slug'        => 'advanced-custom-fields',
+		 	'name'        => 'Classic Editor',
+		 	'slug'        => 'classic-editor',
              'required'   => false,
 		 ),
 
