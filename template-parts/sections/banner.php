@@ -9,8 +9,6 @@ $tuhin_banner_btn_text= $tuhin_section_meta['button_text'];
 <section id="hero-section">
     <div class="container">
         <div class="hero-row-outer">
-            <p class="hero-w-massage">Welcome to My Portfolio</p>
-
             <div class="hero-social">
                 <ul>
                     <li><a href="#">Facebook</a></li>
@@ -19,21 +17,19 @@ $tuhin_banner_btn_text= $tuhin_section_meta['button_text'];
                 </ul>
             </div>
 
-            <img src="<?php echo get_template_directory_uri(); ?>/assets/img/111.png" alt="WPequal"
+            <img src="<?php echo $tuhin_banner_image[0]; ?>" alt="<?php echo esc_html($tuhin_banner_heading); ?>"
                  class="hero-personal-img img-fluid">
         </div>
         <div class="row">
             <div class="col-md-12">
-                <h2 class="text-white hero-title">I am Mesbah-ul-Karim</h2>
-                <h2 class="hero-job">Wordpress Developer </h2>
-                <p class="text-white hero-sub-text">I'm a
-                    Political man with extensive experience for over 25
-                    years. <br> My
-                    xpertise
-                    is to create and
-                    design.
-                </p>
-                <a href="#" class="btn btn-medium">Contact Us</a>
+                <h2 class="text-white hero-title"><?php echo esc_html($tuhin_banner_heading); ?></h2>
+                <h2 class="hero-job"><?php echo esc_html($tuhin_section_meta['banner_subheading']); ?></h2>
+                <?php
+                echo apply_filters('the_content', $tuhin_section_meta['banner_description']);
+                ?>
+                <a href="<?php echo esc_url($tuhin_section_meta['button_url'])?>" class="btn btn-medium">
+                    <?php echo esc_html($tuhin_banner_btn_text); ?>
+                </a>
             </div>
         </div>
     </div>

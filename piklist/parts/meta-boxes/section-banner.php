@@ -29,6 +29,15 @@ piklist('field', array(
         ),
         array(
             'type' => 'text',
+            'field' => 'banner_subheading',
+            'label' => __('Banner Sub Heading', 'tuhin'),
+            'value' => 'Banner Sub Headline',
+            'attributes' => array(
+                'class' => 'widefat'
+            )
+        ),
+        array(
+            'type' => 'textarea',
             'field' => 'banner_description',
             'label' => __('Banner Description', 'tuhin'),
             'value' => 'Banner Description Goes Here',

@@ -16,7 +16,7 @@ piklist('field', array(
         'services'=>'Services',
         'skills'=>'Skills',
         'blog'=>'Latest Blog',
-        'newsletter'=>'Newsletter',
+        'story'=>'Story',
         'testimonial'=>'Testimonial',
         'contact'=>'Contact',
     )

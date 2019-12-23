@@ -267,7 +267,7 @@ function tuhin_process_section_type($part){
     global $post;
     if ($post && 'section'== $post->post_type){
         $section_type = get_post_meta($post->ID,'tuhin_section_type',true);
-        $sections = array('banner','about','services','skills','blog','newsletter','testimonial','contact');
+        $sections = array('banner','about','services','skills','blog','story','testimonial','contact');
         foreach ($sections as $section){
             if ("section-{$section}.php"==$part['part'] && $section!=$section_type){
                 return false;

@@ -1,7 +1,13 @@
+<?php
+global $tuhin_section_id;
+$tuhin_section_meta = get_post_meta( $tuhin_section_id, 'tuhin_contact_section', true );
+$tuhin_section             = get_post( $tuhin_section_id );
+$section_title = $tuhin_section->post_title;
+?>
 <section id="contact-section" class="p-100 bg-one-dark">
     <div class="container">
         <div class="sec-heading-wrap text-center mb-60">
-            <h2>Contact Me</h2>
+            <h2><?php echo esc_html($section_title)?></h2>
             <span class="sec-divider">
                     <span class="sec-dot"></span>
                     <span class="sec-dot-big"></span>

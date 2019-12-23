@@ -49,7 +49,7 @@ piklist('field', array(
             'type'=> 'text',
             'field'=> 'about_button_text',
             'label'=> __('About Button Text','tuhin'),
-            'value'=> 'Start With Us',
+            'value'=> 'Contact Me',
             'attributes' => array(
                 'class' => 'widefat'
             )
