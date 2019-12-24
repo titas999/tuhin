@@ -755,9 +755,9 @@ textarea {
 
 .story-time-line {
     padding-bottom: 30px;
-    background: url('../img/sign.png') no-repeat;
-    background-position: center center;
-    /* background-size: 280px; */
+    /*background: url('../img/sign.png') no-repeat;*/
+    /*background-position: center center;*/
+    /*!* background-size: 280px; *!*/
 }
 
 .timeline-item {
@@ -1068,6 +1068,7 @@ textarea {
 
 .input-group {
     margin-bottom: 30px;
+    display: inline;
 }
 
 .input-group input,

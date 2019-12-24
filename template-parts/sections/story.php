@@ -1,6 +1,6 @@
 <?php
 global $tuhin_section_id;
-$tuhin_section_meta = get_post_meta( $tuhin_section_id, 'tuhin_counter_section', true );
+$tuhin_section_meta = get_post_meta( $tuhin_section_id, 'tuhin_story_section', true );
 $tuhin_section             = get_post( $tuhin_section_id );
 
 ?>
@@ -11,56 +11,34 @@ $tuhin_section             = get_post( $tuhin_section_id );
         <div class="row">
             <div class="col-md-6">
                 <div class="single-story-wrap">
-                    <p class="color-base">MY Storis!</p>
-                    <h2 class="text-white">Some History of My Life, 1980 - 2019</h2>
+                    <p class="color-base"><?php echo esc_html($tuhin_section_meta['story_subheading'])?></p>
+                    <h2 class="text-white"><?php echo esc_html($tuhin_section_meta['story_heading'])?></h2>
                     <span class="sec-divider">
                             <span class="sec-dot"></span>
                             <span class="sec-dot-big"></span>
                             <span class="sec-dot"></span>
                         </span>
-                    <p class="my-story-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do
-                        eiusmod tempor incidi labore
-                        et dolore.</p>
-
-                    <div class="media mt-50">
-                        <div class="user-avatar ml-2 mr-4">
-                            <img src="<?php echo get_template_directory_uri(); ?>/assets/img/p-8.png"
-                                 class=" rounded-circle" alt="Onuc - WPequal">
-                        </div>
-                        <div class="media-body align-self-center">
-                            <h4 class="mt-0 color-base">Date Of Brith</h4>
-                            <p class="text-white">25, March 1970</p>
-                        </div>
-                    </div>
+                    <?php echo apply_filters('the_content', $tuhin_section_meta['story_description']);?>
                 </div>
             </div>
 
             <div class="col-md-6">
                 <div class="story-time-line">
-                    <div class="d-flex timeline-item"><span class="text-white fixed-height">1980</span> Lorem ipsum
-                        dolor sit amet.
+                    <?php
+                    $tuhin_section_group = get_post_meta( $tuhin_section_id, 'tuhin_story_group', true );
+                    if (is_array($tuhin_section_group)){
+                        foreach ($tuhin_section_group as $tuhin_story_group){ ?>
+                    <div class="d-flex timeline-item"><span class="text-white fixed-height"><?php echo esc_html($tuhin_story_group['story_year'])?></span><?php echo esc_html($tuhin_story_group['story_year_description'])?>
                     </div>
+                    <?php
+                        }
+                    }
+                    ?>
 
-                    <div class="d-flex timeline-item"><span class="text-white fixed-height">2000</span> Lorem ipsum
-                        dolor sit amet, consectetur adipisicing elit. Sed do eius empor incididunt ut labore et
-                        dolore magna aliqua. Ut enim ad mini quis nostrud exercitation ullamco.
-                    </div>
 
-                    <div class="d-flex timeline-item"><span class="text-white fixed-height">2010</span> Sed do
-                        eiusmod tempor incididunt ut labore et dolore magna aliqua. empor incididunt ut labore et
-                        dolore magna aliqua.
-                    </div>
-
-                    <div class="d-flex timeline-item"><span class="text-white fixed-height">2015</span> Eiusmod
-                        tempor incididunt ut labore et dolore magna aliqua.
-                    </div>
-
-                    <div class="d-flex timeline-item"><span class="text-white fixed-height">2019</span> Ut enim ad
-                        minim veniam, quis nostrud exercitation ullamco.
-                    </div>
                 </div>
 
-                <a href="#" class="btn btn-medium btn-inline btn-fill mr-4">Cv Download</a>
+                <a href="<?php echo esc_url($tuhin_section_meta['story_btn_url'])?>" class="btn btn-medium btn-inline btn-fill mr-4"><?php echo esc_html($tuhin_section_meta['story_btn_text'])?></a>
             </div>
         </div>
 

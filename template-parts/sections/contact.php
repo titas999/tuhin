@@ -7,7 +7,7 @@ $section_title = $tuhin_section->post_title;
 <section id="contact-section" class="p-100 bg-one-dark">
     <div class="container">
         <div class="sec-heading-wrap text-center mb-60">
-            <h2><?php echo esc_html($section_title)?></h2>
+            <h2><?php echo esc_html($section_title); ?></h2>
             <span class="sec-divider">
                     <span class="sec-dot"></span>
                     <span class="sec-dot-big"></span>
@@ -15,44 +15,14 @@ $section_title = $tuhin_section->post_title;
                 </span>
         </div>
         <div class="row contact-content-wrap">
-            <form class="contact-form col-md-7" method="post" action="#" id="contact_form">
+            <div class="contact-form col-md-7" id="contact_form">
 
-                <div class="row">
-                    <div class="col-md-6">
-                        <div class="input-group">
-                            <input type="text" name="con_name" class="required" placeholder="Your Name*"/>
-                        </div>
-                    </div>
-                    <div class="col-md-6">
-                        <div class="input-group">
-                            <input type="email" name="con_email" class="required" placeholder="Your Email*"/>
-                        </div>
-                    </div>
-                    <div class="col-md-6">
-                        <div class="input-group">
-                            <input type="text" name="con_phone" placeholder="Phone"/>
-                        </div>
-                    </div>
-                    <div class="col-md-6">
-                        <div class="input-group">
-                            <input type="text" name="con_company" placeholder="Subject"/>
-                        </div>
-                    </div>
-                    <div class="col-md-12">
-                        <div class="input-group">
-                            <textarea name="con_message" class="required" placeholder="Message*"></textarea>
-                        </div>
-                    </div>
-                    <div class="col-md-12">
-                        <button type="submit" class="ast_btn btn btn-medium btn-inline btn-fill"
-                                name="con_submit"><span>Send Message<i class="sgi sgi-Mail"></i></span></button>
-                        <img src="ajax/loader.gif" alt="" class="ast_loader"/>
-                    </div>
-                </div>
+
+                                    <?php echo do_shortcode('[contact-form-7 id="43" title="Contact form 1"]'); ?>
 
                 <div class="ast_con_message"></div>
 
-            </form>
+            </div>
             <div class="col-md-4">
                 <div class="google-map">
                     <iframe

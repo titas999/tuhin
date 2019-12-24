@@ -28,3 +28,7 @@ Nicolas Gallagher and Jonathan Neal https://necolas.github.io/normalize.css/
     margin-bottom: 60px;
     color: #fff;
 }
+.single-story-wrap p {
+    padding-top: 20px;
+    line-height: 28px;
+}

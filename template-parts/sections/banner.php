@@ -10,11 +10,11 @@ $tuhin_banner_btn_text= $tuhin_section_meta['button_text'];
     <div class="container">
         <div class="hero-row-outer">
             <div class="hero-social">
-                <ul>
-                    <li><a href="#">Facebook</a></li>
-                    <li><a href="#">Instagram</a></li>
-                    <li><a href="#">Twitter</a></li>
-                </ul>
+                <?php
+                wp_nav_menu( array(
+                    'theme_location' => 'social_menu',
+                ) );
+                ?>
             </div>
 
             <img src="<?php echo $tuhin_banner_image[0]; ?>" alt="<?php echo esc_html($tuhin_banner_heading); ?>"

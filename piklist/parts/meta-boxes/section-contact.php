@@ -27,49 +27,6 @@ piklist('field', array(
                 'class' => 'widefat'
             )
         ),
-        array(
-            'type'=> 'group',
-            'field'=> 'contact_items',
-            'label'=> __('contact Items','tuhin'),
-            'add_more'=> true,
-            'attributes'=> array(
-                'class'=> 'widefat'
-            ),
-            'fields'=> array(
-                array(
-                    'type' => 'file',
-                    'field' => 'client_image',
-                    'label' => __('Upload Client Image','tuhin'),
-                    'attributes' => array(
-                        'class' => 'widefat'
-                    )
-                ),
-                array(
-                    'type' => 'text',
-                    'field' => 'client_name',
-                    'label' => __('Client Name','tuhin'),
-                    'attributes' => array(
-                        'class' => 'widefat'
-                    )
-                ),
-                array(
-                    'type' => 'text',
-                    'field' => 'client_designation',
-                    'label' => __('Clients Designation','tuhin'),
-                    'attributes' => array(
-                        'class' => 'widefat'
-                    )
-                ),
-                array(
-                    'type' => 'textarea',
-                    'field' => 'client_contact',
-                    'label' => __('Clients contact','tuhin'),
-                    'attributes' => array(
-                        'class' => 'widefat'
-                    )
-                ),
-            )
-        )
 
     )
 )

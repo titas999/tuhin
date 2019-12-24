@@ -34,7 +34,7 @@ $section_title = $tuhin_section->post_title;
                         }
                         ?>
                         <h4 class="text-white flex-order"><?php the_title(); ?></h4>
-                        <p class="flex-order"><?php the_content(); ?></p>
+                        <p class="flex-order"><?php the_excerpt(); ?></p>
                     </div>
                 </div>
             <?php

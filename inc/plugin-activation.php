@@ -64,12 +64,11 @@ function tuhin_register_required_plugins() {
 //            'source'    =>  get_theme_file_path("/plugins/codestar-framework.zip"),
 //            'required'  => true,
 //        ),
-//        array(
-//            'name'      => 'Elementor Pro',
-//            'slug'      => 'elementor-pro',
-//            'source'    =>  get_theme_file_path("/plugins/elementor-pro.zip"),
-//            'required'  => false,
-//        ),
+        array(
+            'name'      => 'Contact Form 7',
+            'slug'      => 'contact-form-7',
+            'required'  => false,
+        ),
         array(
             'name'      => 'Piklist',
             'slug'      => 'piklist',

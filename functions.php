@@ -45,9 +45,7 @@ if ( ! function_exists( 'tuhin_setup' ) ) :
         // This theme uses wp_nav_menu() in one location.
         register_nav_menus( array(
             'primary_menu' => esc_html__( 'Primary Menu', 'tuhin' ),
-            'seo_services' => esc_html__( 'SEO Services', 'tuhin' ),
-            'target_market' => esc_html__( 'Target Market', 'tuhin' ),
-            'woocommerce_seo' => esc_html__( 'Woocommerce SEO', 'tuhin' ),
+            'social_menu' => esc_html__( 'Social Menu', 'tuhin' ),
         ) );
 
         /*
@@ -110,8 +108,8 @@ function tuhin_widgets_init() {
         'description'   => esc_html__( 'Add widgets here.', 'tuhin' ),
         'before_widget' => '<section id="%1$s" class="widget %2$s">',
         'after_widget'  => '</section>',
-        'before_title'  => '<h2 class="widget-title">',
-        'after_title'   => '</h2>',
+        'before_title'  => '<h4 class="widget-title">',
+        'after_title'   => '</h4>',
     ) );
     register_sidebar( array(
         'name'          => esc_html__( 'Sidebar 2', 'tuhin' ),
@@ -119,8 +117,8 @@ function tuhin_widgets_init() {
         'description'   => esc_html__( 'Add widgets here.', 'tuhin' ),
         'before_widget' => '<section id="%1$s" class="widget %2$s">',
         'after_widget'  => '</section>',
-        'before_title'  => '<h2 class="widget-title">',
-        'after_title'   => '</h2>',
+        'before_title'  => '<h4 class="widget-title">',
+        'after_title'   => '</h4>',
     ) );
     register_sidebar( array(
         'name'          => esc_html__( 'Sidebar 3', 'tuhin' ),
@@ -128,8 +126,8 @@ function tuhin_widgets_init() {
         'description'   => esc_html__( 'Add widgets here.', 'tuhin' ),
         'before_widget' => '<section id="%1$s" class="widget %2$s">',
         'after_widget'  => '</section>',
-        'before_title'  => '<h2 class="widget-title">',
-        'after_title'   => '</h2>',
+        'before_title'  => '<h4 class="widget-title">',
+        'after_title'   => '</h4>',
     ) );
     register_sidebar( array(
         'name'          => esc_html__( 'Sidebar 4', 'tuhin' ),
@@ -137,8 +135,8 @@ function tuhin_widgets_init() {
         'description'   => esc_html__( 'Add widgets here.', 'tuhin' ),
         'before_widget' => '<section id="%1$s" class="widget %2$s">',
         'after_widget'  => '</section>',
-        'before_title'  => '<h2 class="widget-title">',
-        'after_title'   => '</h2>',
+        'before_title'  => '<h4 class="widget-title">',
+        'after_title'   => '</h4>',
     ) );
     register_sidebar( array(
         'name'          => esc_html__( 'Blog Sidebar', 'tuhin' ),
@@ -150,13 +148,13 @@ function tuhin_widgets_init() {
         'after_title'   => '</h2>',
     ) );
     register_sidebar( array(
-        'name'          => esc_html__( 'Contact Sidebar', 'tuhin' ),
-        'id'            => 'contact-sidebar',
+        'name'          => esc_html__( 'Footer Copyright', 'tuhin' ),
+        'id'            => 'footer_copyright',
         'description'   => esc_html__( 'Add widgets here.', 'tuhin' ),
-        'before_widget' => '<div id="%1$s" class="widget col-md-6">',
+        'before_widget' => '<div id="%1$s" class="widget">',
         'after_widget'  => '</div>',
-        'before_title'  => '<h2 class="widget-title">',
-        'after_title'   => '</h2>',
+        'before_title'  => '<h4 class="widget-title">',
+        'after_title'   => '</h4>',
     ) );
 }
 add_action( 'widgets_init', 'tuhin_widgets_init' );

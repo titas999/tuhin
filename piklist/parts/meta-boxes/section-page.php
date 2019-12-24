@@ -2,6 +2,7 @@
 /**
  * Title: Section Settings
  * Post Type: page
+ * Template: page-templates/landing
  * Order: 10
  */
 
